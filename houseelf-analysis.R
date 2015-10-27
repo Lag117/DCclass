@@ -3,7 +3,9 @@
 #dataset. It then calculates GC content of the provided DNA sequences
 #and adds this percentage as a column to the dataset. It then writes
 #a new csv file with the ID#, ear size class, and GC content columns.
+
 library(dplyr)
+
 #import data
 data <- read.csv("http://www.datacarpentry.org/semester-biology/data/houseelf_earlength_dna_data.csv")
 #function that splits things into two size classes, large and small,
