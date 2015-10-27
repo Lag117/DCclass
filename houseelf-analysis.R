@@ -53,6 +53,7 @@ add_GC <- function(df){
     mutate(gc_content = GCcontent(dnaseq))
   return(gccontentadd)
 }
+
 #takes all previous functions and adds appropriate columns
 #then writes a csv with the columns: id, size class, and gc content
 data_sizes <- add_size_classes(data)
