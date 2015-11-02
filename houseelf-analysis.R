@@ -58,7 +58,7 @@ add_GC <- function(df){
 }
 
 get_size_class <- function(seq){
-   #Calculate the GC-content for one or more sequences
+   #splits ear lengths into size categories
    ear_lengths <- ifelse(seq > 10, "large", "small")
    return(ear_lengths)
 }
@@ -67,4 +67,5 @@ get_size_class <- function(seq){
 #then writes a csv with the columns: id, size class, and gc content
 data_sizes <- add_size_classes(data)
 data_sizes_and_gc <- add_GC(data_sizes)
-write.csv(data_sizes_and_gc[,c("id","size_class","gc_content")], file="size_and_gc.csv")
+#writes csv with id, ear length class, and gc content for each individual
+write.csv(data_sizes_and_gc[,c("id","size_class","gc_content")], file="id_earsize_and_gc.csv")
