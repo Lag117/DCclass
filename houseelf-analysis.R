@@ -54,6 +54,12 @@ add_GC <- function(df){
   return(gccontentadd)
 }
 
+get_size_class <- function(seq){
+   #Calculate the GC-content for one or more sequences
+   ear_lengths <- ifelse(seq > 10, "large", "small")
+   return(ear_lengths)
+}
+
 #takes all previous functions and adds appropriate columns
 #then writes a csv with the columns: id, size class, and gc content
 data_sizes <- add_size_classes(data)
