@@ -9,7 +9,7 @@ library(dplyr)
 #import data
 #from web: data <- read.csv("http://www.datacarpentry.org/semester-biology/data/houseelf_earlength_dna_data.csv")
 #from data subdirectory for problem 3
-data <- read.csv("~/myclass/data/houseelf_earlength_dna_data.csv")
+data <- read.csv("~/myclass/data/houseelf_earlength_dna_data_1.csv")
 
 #function that splits things into two size classes, large and small,
 #based on ear length and a threshold that the user can set
