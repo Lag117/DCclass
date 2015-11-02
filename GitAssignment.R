@@ -6,6 +6,7 @@ GCcontent <- function(sequence){
   gc_content <- (Gs + Cs) / str_length(sequence) * 100
   return(gc_content)
 }
+
 #test
 GCcontent("agtgactcg")
 
