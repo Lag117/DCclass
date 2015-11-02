@@ -38,6 +38,7 @@ add_size_classes <- function(df){
 
 #function that calculates GC content
 GCcontent <- function(sequence){
+  #added str_to_upper so it can take sequences with any intial case
   sequence <- str_to_upper(sequence)
   Gs <- str_count(sequence, 'G')
   Cs <- str_count(sequence, 'C')
@@ -67,5 +68,6 @@ get_size_class <- function(seq){
 #then writes a csv with the columns: id, size class, and gc content
 data_sizes <- add_size_classes(data)
 data_sizes_and_gc <- add_GC(data_sizes)
+
 #writes csv with id, ear length class, and gc content for each individual
 write.csv(data_sizes_and_gc[,c("id","size_class","gc_content")], file="id_earsize_and_gc.csv")
