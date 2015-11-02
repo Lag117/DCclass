@@ -69,5 +69,5 @@ get_size_class <- function(seq){
 data_sizes <- add_size_classes(data)
 data_sizes_and_gc <- add_GC(data_sizes)
 
-#writes csv with id, ear length class, and gc content for each individual
+#writes csv with id, ear length class, & gc content for each individual
 write.csv(data_sizes_and_gc[,c("id","size_class","gc_content")], file="id_earsize_and_gc.csv")
